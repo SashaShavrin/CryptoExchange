@@ -1,0 +1,25 @@
+@import url(../../../colors.css);
+
+.container {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 20px;
+        margin-left: 16px;
+    }
+}
+
+.tricker {
+    text-transform: uppercase;
+    margin: 0 12px;
+}
+
+.name {
+    color: var(--turquoise);
+}
+
+
+.active {
+    background: var(--hover);
+}

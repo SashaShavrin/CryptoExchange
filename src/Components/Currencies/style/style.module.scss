@@ -1,0 +1,85 @@
+@import url(../../../colors.css);
+
+@mixin breakpoint($point) {
+    @if $point ==lg {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==sm {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xs {
+        @media (max-width: 370px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    animation: 0.4s show linear;
+    position: relative;
+
+    @include breakpoint (sm) {
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.swap {
+    margin: 15px 30px;
+
+    @include breakpoint (sm) {
+        margin: 16px 0;
+    }
+}
+
+.loading {
+    height: 54px;
+
+    @include breakpoint (sm) {
+        height: 156px;
+    }
+}
+
+.error {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    font-size: 30px;
+}

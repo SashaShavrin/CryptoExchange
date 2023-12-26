@@ -1,0 +1,141 @@
+@import url(../../../colors.css);
+
+.scroling {
+  max-height: 150px;
+  overflow-y: auto;
+  height: 100%;
+  margin-right: -2px;
+}
+
+.scroling::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroling::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--turquoise);
+}
+
+.scroling::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+.container {
+  border-radius: 5px;
+  border: 1px solid #E3EBEF;
+  background: #F6F7F8;
+  width: 440px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  font-family: "Roboto";
+  font-size: 16px;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search_container {
+  width: 440px;
+  height: 203px;
+  border-radius: 5px;
+  border: 1px solid var(--easy-blue);
+  background: var(--grey);
+  margin-top: 145px;
+  z-index: 2;
+}
+
+@media (max-width: 1400px) {
+  .search_container {
+    width: 100%;
+    margin-top: 155px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--easy-blue);
+}
+
+.item {
+  transition: 0.2s;
+}
+
+.item :hover {
+  background: var(--hover);
+}
+
+.empty {
+  margin-left: 20px;
+  opacity: 0.5;
+  margin-top: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: var(--turquoise);
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.block input {
+  padding: 14px 16px;
+}
+
+.box {
+  width: 165px;
+  padding: 8px 0;
+  padding-left: 24px;
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid var(--easy-blue);
+  padding-right: 8px;
+}
+
+.box_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box img:first-child {
+  margin-right: 12px;
+  width: 20px;
+}
+
+.box img:last-child {
+  width: 16px;
+  margin-left: 30px;
+}
+
+.box_text {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.module.css.map */
