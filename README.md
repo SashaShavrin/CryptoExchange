@@ -1,4 +1,4 @@
-![swap](https://github.com/SashaShavrin/CryptoExchange/assets/97390534/a51439b6-7006-47e9-af3f-e05aee25ef0e)# Crypto Exchange - криптовалютный конвертер
+# Crypto Exchange - криптовалютный конвертер
 
 ## Запуск
 ### `npm i`
