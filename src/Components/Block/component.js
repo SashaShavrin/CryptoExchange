@@ -12,8 +12,11 @@ export const Block = ({
   setError,
   disabledInput,
   typeInput,
+  setActiveList,
+  typeList,
+  activeList,
 }) => {
-  const [openList, setOpenList] = useState(false);
+  const [openList, setOpenList] = useState();
   const [itemList, setItemsList] = useState(currencies);
   const [searchText, setSearchText] = useState("");
 
@@ -30,6 +33,7 @@ export const Block = ({
   const renderRow = ({ index, key, style }) => {
     return (
       <div
+        key={key}
         className={styles.item}
         onClick={() => {
           setError("");
@@ -49,7 +53,7 @@ export const Block = ({
 
   return (
     <div className={styles.container}>
-      {openList ? (
+      {openList && activeList === typeList ? (
         <div className={styles.search_container}>
           <div className={styles.header}>
             <input
@@ -61,20 +65,20 @@ export const Block = ({
             <img
               onClick={() => setOpenList(!openList)}
               src="./images/close.svg"
-              alt="close"
+              alt=""
             />
           </div>
 
           {itemList.length > 0 ? (
             <List
               width={"100"}
-              height={155}
-              key={itemList.id}
+              height={150}
               scrollToIndex={currentCurrency?.indexElement}
               rowRenderer={renderRow}
               rowCount={itemList.length}
               rowHeight={50}
               className={styles.scroling}
+              overscanRowCount={3}
             />
           ) : (
             <div className={styles.empty}>There are no search results</div>
@@ -88,7 +92,13 @@ export const Block = ({
             disabled={disabledInput}
             type={typeInput}
           />
-          <div className={styles.box} onClick={() => setOpenList(!openList)}>
+          <div
+            className={styles.box}
+            onClick={() => {
+              setActiveList(typeList);
+              setOpenList(activeList === typeList ? !openList : true);
+            }}
+          >
             {currentCurrency ? (
               <div className={styles.box_content}>
                 {currentCurrency.image && (

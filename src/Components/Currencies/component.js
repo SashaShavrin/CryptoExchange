@@ -13,6 +13,8 @@ export const Currencies = ({ setError, error }) => {
 
   const [isLoad, setIsLoad] = useState(false);
 
+  const [activeList, setActiveList] = useState();
+
   useEffect(() => {
     setIsLoad(true);
     fetch(
@@ -112,6 +114,9 @@ export const Currencies = ({ setError, error }) => {
       {currencies && (
         <>
           <Block
+            activeList={activeList}
+            setActiveList={setActiveList}
+            typeList="from"
             currencies={currencies}
             currentCurrency={fromCurrency}
             setError={setError}
@@ -145,7 +150,10 @@ export const Currencies = ({ setError, error }) => {
           />
 
           <Block
+            activeList={activeList}
+            setActiveList={setActiveList}
             currencies={currencies}
+            typeList="to"
             currentCurrency={toCurrency}
             setCurrentCurrency={setToCurrency}
             value={error.length === 0 ? estimatedAmount?.toAmount : ""}

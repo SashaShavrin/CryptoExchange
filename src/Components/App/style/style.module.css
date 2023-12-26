@@ -122,7 +122,7 @@ button:hover {
 }
 @media (max-width: 576px) {
   .address_container {
-    margin-top: 48px;
+    margin-top: 52px;
   }
 }
 .address_container div:first-child {
