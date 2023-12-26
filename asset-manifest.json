@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CryptoExchange/static/css/main.b2876ac4.css",
-    "main.js": "/CryptoExchange/static/js/main.89a93aa8.js",
+    "main.js": "/CryptoExchange/static/js/main.5f169512.js",
     "static/media/Roboto-Medium.ttf": "/CryptoExchange/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Light.ttf": "/CryptoExchange/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
     "index.html": "/CryptoExchange/index.html",
     "main.b2876ac4.css.map": "/CryptoExchange/static/css/main.b2876ac4.css.map",
-    "main.89a93aa8.js.map": "/CryptoExchange/static/js/main.89a93aa8.js.map"
+    "main.5f169512.js.map": "/CryptoExchange/static/js/main.5f169512.js.map"
   },
   "entrypoints": [
     "static/css/main.b2876ac4.css",
-    "static/js/main.89a93aa8.js"
+    "static/js/main.5f169512.js"
   ]
 }
